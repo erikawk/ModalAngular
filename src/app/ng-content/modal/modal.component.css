@@ -1,0 +1,11 @@
+.modal{
+    width: 500px;
+    height: 250px;
+    text-align: center;
+    color:rgb(243, 120, 243);
+    position: absolute;
+    top: 130px;
+    left: 350px;
+    border-radius: 10px;
+}
+

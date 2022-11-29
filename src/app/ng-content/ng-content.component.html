@@ -1,0 +1,18 @@
+<button (click)="modal()">Clique Aqui!</button>
+<br>
+<input type="text" [(ngModel)]="nomePessoa" placeholder="Informe seu nome aí!" id="inputNome">
+
+<div abreModal *ngIf="abreModal">
+    <app-modal [corModal]="corModal.value">
+        <h1>{{titulo}}{{nomePessoa}}</h1>
+        <button (click)="modal2()" id="botaoModal2">Clique Aqui!</button>
+        <input type="text" #corModal placeholder="Exemplo: red" (change)="0"/>
+        <div *ngIf="abreModal2" modal class="modal2">
+            <app-modal>
+                <h1>Tchau!</h1>
+                <button (click)="modal2()" botao2 id="botaoFechar">Fechar</button>
+            </app-modal>
+        </div>
+        <button (click)="modal()" botao id="botaoFechar1">Fechar</button>
+    </app-modal>
+</div>

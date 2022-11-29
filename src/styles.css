@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text&family=Syne+Mono&display=swap');
+
+* {
+    font-family: 'Crimson Text', serif;
+    font-family: 'Syne Mono', monospace;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url("/assets/imgs/gato_fofo.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+input{
+    width: 200px;
+    height: 30px;
+    background-color: rgb(243, 120, 243);
+    color: white;
+    border: solid white 0.5px;
+    border-radius: 5px;
+}
+
+::placeholder{
+    color: white;
+}
+
+
+.modal2{
+    background-color: aqua;
+}

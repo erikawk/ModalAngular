@@ -1,0 +1,14 @@
+a{
+    margin-left: 730px;
+    color: rgb(34, 156, 156);
+    font-size: 50px;
+}
+
+#flecha{
+    position: absolute;
+    left: 880px;
+    top: 100px;
+    
+    opacity: 0.7;
+    width: 300px;
+}
