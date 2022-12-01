@@ -8,8 +8,8 @@
         <button (click)="modal2()" id="botaoModal2">Clique Aqui!</button>
         <input type="text" #corModal placeholder="Exemplo: red" (change)="0"/>
         <div *ngIf="abreModal2" modal class="modal2">
-            <app-modal>
-                <h1>Tchau!</h1>
+                <button (click)="filtrar()">Consultar</button>
+                <img *ngIf="linkImg" [src]="linkImg">
                 <button (click)="modal2()" botao2 id="botaoFechar">Fechar</button>
             </app-modal>
         </div>

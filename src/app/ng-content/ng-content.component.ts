@@ -1,23 +1,40 @@
 import { Component } from "@angular/core";
+import { stat } from "fs";
+import { AppService } from "../app.service";
 
 @Component({
-    templateUrl: './ng-content.component.html', 
-    styleUrls: ['ng-content.component.css']
+  templateUrl: "./ng-content.component.html",
+  styleUrls: ["ng-content.component.css"],
 })
 export class NgContentComponent {
-    abreModal:boolean = false;
-    abreModal2:boolean = false;
+  constructor(private appService: AppService) {}
 
-    modal(): void{
-        this.abreModal = !this.abreModal; 
-    }
+  abreModal: boolean = false;
+  abreModal2: boolean = false;
+  links: string[] = [];
+  linkSelecionado: string;
+  linkImg: string;
+  status: string; 
 
-    modal2(): void{
-        this.abreModal2 = !this.abreModal2;
-    }
+  ngOnInit(): void {
+    this.appService.getTags().subscribe((links) => {
+      this.links = links;
+    });
+  }
 
-    nomePessoa: string; 
+  filtrar(): void {
+    this.linkImg = 'https://http.dog/' + Number(this.status) + '.jpg'
+  }
 
-    titulo = 'Bem-vindo '
+  modal(): void {
+    this.abreModal = !this.abreModal;
+  }
 
+  modal2(): void {
+    this.abreModal2 = !this.abreModal2;
+  }
+
+  nomePessoa: string;
+
+  titulo = "Bem-vindo ";
 }
