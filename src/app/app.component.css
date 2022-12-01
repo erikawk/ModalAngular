@@ -4,6 +4,10 @@ a{
     font-size: 50px;
 }
 
+a:hover{
+    color: rgb(10, 136, 136);
+}
+
 #flecha{
     position: absolute;
     left: 880px;
